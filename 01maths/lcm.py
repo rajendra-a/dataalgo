@@ -1,0 +1,22 @@
+def lcm(a, b):
+    res = max(a, b)
+    while True:
+        if res%a == 0 and res%b == 0:
+            return res
+        res += 1
+    return res
+
+
+
+def gcd(a, b):
+    if b == 0:
+        return b
+    return gcd(b, a%b)
+
+
+# There is a multiplication formula for the a*b = gcd(a,b)*lcm(*a,b)
+# So LCM of the a and b = a*b//gcd(a,b)
+
+def lcmformula(a,b):
+    return a*b//gcd(a,b)
+
