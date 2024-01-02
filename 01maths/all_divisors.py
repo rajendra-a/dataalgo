@@ -14,4 +14,4 @@ def divisors(n):
             if i != n/i:
                 print(n/i)
     i += 1
-
+print(divisors(14))

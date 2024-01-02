@@ -6,6 +6,7 @@ def lcm(a, b):
         res += 1
     return res
 
+print(lcm(3, 4))
 
 
 def gcd(a, b):
@@ -13,10 +14,13 @@ def gcd(a, b):
         return b
     return gcd(b, a%b)
 
+print(gcd(6, 8))
 
 # There is a multiplication formula for the a*b = gcd(a,b)*lcm(*a,b)
 # So LCM of the a and b = a*b//gcd(a,b)
 
 def lcmformula(a,b):
     return a*b//gcd(a,b)
+
+print(lcmformul(4, 6))
 

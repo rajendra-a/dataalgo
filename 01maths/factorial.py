@@ -4,9 +4,12 @@ def factorial(n):
         res = res * i
     return res
 
+print(factorial(7))
 
 
 def fact(n):
     if n == 0:
         return 1
     return n * fact(n-1)          # Using recursion
+
+print(fact(6))
