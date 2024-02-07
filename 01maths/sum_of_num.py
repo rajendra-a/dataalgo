@@ -1,3 +1,4 @@
+
 # naive solution
 def sum_of_num(n):
     sum = 0

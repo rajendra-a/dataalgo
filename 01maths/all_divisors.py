@@ -8,7 +8,7 @@ print(all_divisors(24))
 
 def divisors(n):
     i = 1
-    while i*i<=n:
+    while i*i <= n:
         if n%i == 0:
             print(i)
             if i != n/i:
