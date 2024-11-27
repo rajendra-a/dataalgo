@@ -1,7 +1,12 @@
-# bubble sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements
-# if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst case
-# time complexity is quite high
-# consider asceding order
+# bubble sort is an algorithm that sorts an array from the lowest value to the heighest value
+# The word bubble comes from how this algorithm works it makes the highest values 'bubble up'    
+# how it works
+"""
+go through the array, one value at a time
+for each value compare the value with next value
+if the value is higher than next one, swap the values so that the highest values comes last
+go through the array as many times as there are values in the array
+"""
 def bubble_sort(l):
     n = len(l)
     
