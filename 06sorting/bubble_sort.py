@@ -1,6 +1,6 @@
 # bubble sort is an algorithm that sorts an array from the lowest value to the heighest value
 # The word bubble comes from how this algorithm works it makes the highest values 'bubble up'    
-# how it works
+####how it works####
 """
 go through the array, one value at a time
 for each value compare the value with next value
@@ -35,8 +35,8 @@ def bubblesort(l):
                 
                 swapped = True
                 
-        if swapped == False:
-                return 
+        if not swapped:
+            break
 l = [10, 8, 20, 5]
 bubblesort(l)
 print(*l)
