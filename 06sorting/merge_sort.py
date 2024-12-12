@@ -9,45 +9,59 @@
 # sort on each of the halves. Finally when both halves are sorted, the merge operation is applied. Merge operation
 # merge opertion is the process of taking two smaller sorted arrays and combining them eventually make a larger one.
 
-def merge(a, low, mid, high):
-    left = a[low:mid + 1]
-    right = a[mid + 1: high + 1]
+def merge(arr, start, mid, end):
+    # creating and intializing the left subarray and right sub arrays
+    # extra space - outplace sorting algorithm
+    left = arr[start:mid+1]
+    right = arr[mid+1:end+1]
     i = j = 0
     k = low
     
     while i < len(left) and j < len(right):
         if left[i] < right[j]:
-            a[k] = left[i]
-            
-            k += 1
+            arr[k] = left[i]
             i += 1
         else: 
-            a[k] = right[j]
-            
-            k += 1
+            arr[k] = right[j]
             j += 1
-            
+    k  += 1
+
+    # Copying the remaining elements from left subtree
     while i < len(left):
-        a[k] = left[i]
-        
+        arr[k] = arr[i]
         i += 1
         k += 1
-    
+
+    # Copying the remaining elements from right subtree
     while j < len(right):
-        a[k] = right[j]
-        
+        arr[k] = right[j] 
         j += 1
         k += 1
-    
-def merge_sort(arr, l, r):
-    if r > l:
-        m = (r+l)//2
-        merge_sort(arr, l, m)
-        merge_sort(arr, m+1, r)
-        merge(arr, l, m, r)
         
+def merge_sort(arr, start, end):
+    if start < end:
+        # Devide
+        mid = start+(end-start))//2
+
+        # Conquer
+        # Recursive call for left subtree
+        merge_sort(arr, start, mid)
+        # Recursive call for right subtree
+        merge_sort(arr, mid+1, end)
+        # combine
+        # combine the left and right subtrees
+        merge(arr, start, mid, end)
+        
+# Drivercode
 arr = [10, 5, 30, 15, 7]
 
+start = 0
+
+end =len(arr) - 1
+
+n = len(arr)
+
+
+# function calling
 merge_sort(arr, 0, 4)
 
-print(*arr)  
