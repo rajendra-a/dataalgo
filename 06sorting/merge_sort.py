@@ -15,7 +15,7 @@ def merge(arr, start, mid, end):
     left = arr[start:mid+1]
     right = arr[mid+1:end+1]
     i = j = 0
-    k = low
+    k = start
     
     while i < len(left) and j < len(right):
         if left[i] < right[j]:
@@ -41,7 +41,7 @@ def merge(arr, start, mid, end):
 def merge_sort(arr, start, end):
     if start < end:
         # Devide
-        mid = start+(end-start))//2
+        mid = start+(end-start)//2
 
         # Conquer
         # Recursive call for left subtree
@@ -64,4 +64,6 @@ n = len(arr)
 
 # function calling
 merge_sort(arr, 0, 4)
+
+print(arr)
 
